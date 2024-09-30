@@ -3,3 +3,6 @@ Django==5.1.1
 sqlparse==0.5.1
 typing_extensions==4.12.2
 tzdata==2024.1
+pillow==10.4.0
+ 
+# para instalar las dependencias automaticamente pip install -r requirements.txt

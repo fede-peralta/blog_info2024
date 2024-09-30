@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Categoria, Post
 
 
-# Register your models here.
+# Register your models here.(registrando la base de datos) = registramos los modelos de models.py
 
 @admin.register(Post)
 class PostsAdmin(admin.ModelAdmin):

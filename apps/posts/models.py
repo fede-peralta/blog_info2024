@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models # creando modelos de tabla de base de datos
 from django.utils import timezone
 
 # Create your models here.
@@ -12,7 +12,8 @@ class Categoria(models.Model):
     def __str__(self):
             return self.nombre
     
-  
+
+# la vista desde el edmin  
 class Post(models.Model):
     titulo =  models.CharField(max_length=50, null=False)
     subtitulo = models.CharField(max_length=100, null=True, blank=True)
@@ -24,12 +25,12 @@ class Post(models.Model):
     publicado = models.DateTimeField(default=timezone.now)
     
 
-class Meta: 
-    ordering = ('-publicado',)
+    class Meta:  # orden as-ds
+        ordering = ('-publicado',)
 
-def __str__(self):
-    return self.titulo
+    def __str__(self):
+        return self.titulo
 
-def dalate(self, using= None, keep_parents = False):
-    self.imagen.delete(self.imagen.name)
-    super().delete()
+    def dalate(self, using= None, keep_parents = False):
+        self.imagen.delete(self.imagen.name)
+        super().delete()
